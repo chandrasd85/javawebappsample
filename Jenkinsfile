@@ -16,7 +16,7 @@ node {
     }
   
     stage('build') {
-      sh '/opt/homebrew/Cellar/maven/3.9.3/libexec/mvn clean package'
+      sh '/opt/homebrew/bin/mvn clean package'
       
     }
   
