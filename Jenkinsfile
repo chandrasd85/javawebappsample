@@ -8,6 +8,7 @@ def getFtpPublishProfile(def publishProfilesJson) {
 }
 
 node {
+  
   withEnv(['AZURE_SUBSCRIPTION_ID=8ca9ed63-23b0-4857-a3c9-461065ace589',
         'AZURE_TENANT_ID=ab8405a0-5976-45b0-a2fe-618c5aeef010']) {
     stage('init') {
@@ -15,7 +16,7 @@ node {
     }
   
     stage('build') {
-      sh 'mvn clean package'
+      sh '/opt/homebrew/bin/mvn clean package'
       
     }
   
